@@ -1,0 +1,15 @@
+<ion-view view-title="Vehiculos">
+  <ion-content>
+      <ul class="list">
+        <div class="item item-divider">
+           Selecciona un vehiculo
+        </div>
+         <li class="item" ng-repeat="vehicule in vehicules">
+            <a href="#/tab/account">
+               <h3>{{vehicule.name}}</h3>
+               <h6>{{vehicule.licence}}</h6>
+            </a>
+         </li>
+      </ul>
+  </ion-content>
+</ion-view>
