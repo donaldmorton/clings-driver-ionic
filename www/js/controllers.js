@@ -148,4 +148,8 @@ angular.module('starter.controllers', [])
     return $scope.shownGroup === group;
   };
 
+})
+
+.controller('reciboCtrl',function($scope){
+
 });
