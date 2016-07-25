@@ -118,4 +118,34 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+.controller('orderCtrl',function($scope){
+  $scope.shownGroup = null;
+
+  $scope.items=[
+    {
+      name:'Shirt',
+      price:'49.99'
+    },
+    {
+      name:'Blouse',
+      price:'49.99'
+    },
+    {
+      name:'Pants',
+      price:'49.99'
+    }
+  ]
+
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+
 });
